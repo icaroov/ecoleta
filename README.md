@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="NextLevelWeek" title="#nlw" src="./github/banner.png" />
+    <img alt="NextLevelWeek" title="#nlw" src=".github/banner.png" />
 </h1>
 
 <h4 align="center"> 
@@ -11,7 +11,7 @@
   
 
   <a href="https://github.com/icaroov">
-    <img alt="Made by icaro-oliveira" src="https://img.shields.io/badge/made%20by-icaro-oliveira-%2304D361">
+    <img alt="Made by Ícaro" src="https://img.shields.io/badge/made%20by-Icaro%20Oliveira-%2304D361">
   </a>
 
   <a href="https://github.com/icaroov/ecoleta/commits/master">
@@ -43,7 +43,7 @@ Projeto desenvolvido durante a **NLW - Next Level Week** oferecida pela **Rocket
 Layout disponível no [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A546).
 
 <p align="center">
-  <img alt="Ecoleta" title="#nlx" src="./github-assets/ecoleta.png" width="100%">
+  <img alt="Ecoleta" title="#nlx" src=".github/ecoleta.png" width="100%">
 </p>
 
 ## 🛠 Ferramentas
@@ -123,4 +123,4 @@ $ npm run start
 
 ## ✨ Finalizando
 
-Este projeto esta sendo feito durante a **Next Level Week** em Junho de 2020, por Ícaro Oliveira ✨ [Entre em contato!](https://www.linkedin.com/in/icaroov/)
+Este projeto esta sendo feito durante a **Next Level Week** em Junho de 2020, por **Ícaro Oliveira** 👋🏼 [Entre em contato!](https://www.linkedin.com/in/icaroov/)
