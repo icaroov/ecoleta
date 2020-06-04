@@ -2,21 +2,45 @@ import { Request, Response } from 'express'
 import knex from '../database/connection'
 
 class PointsController {
-async show(req: Request, res: Response) {
-  const { id } = req.params
+  // filter
+  async index(req: Request, res: Response) {
+    const { city, uf, items } = req.query
 
-  const point = await knex('points').where('id', id).first()
+    const parsedItems = String(items)
+    .split(',')
+    .map(item => Number(item.trim()))
 
-  if (!point) {
-    return res.status(400).json({ error: 'Point not found.' })
+    const points = await knex('points')
+    .join('point_items', 'points.id', '=', 'point_items.point_id')
+    .whereIn('point_items.item_id', parsedItems)
+    .where('city', String(city))
+    .where('uf', String(uf))
+    .distinct()
+    .select('points.*'
+    
+    )
+
+    return res.json(points)
+
   }
 
-  const items = await knex('items')
-  .join('point_items', 'items_id', '=', 'point_items.items_id')
-  .where('point_items.point_id', id)
-  .select('items.title')
+  async show(req: Request, res: Response) {
+    const { id } = req.params;
 
-  return res.json({point, items})
+    const point = await knex('points').where('id', id).first();
+
+    if (!point){
+        return res.status(400).json({message: 'Point not faund.'});
+    } 
+
+    const items = await knex('items')
+        .join( 'point_items', 'items.id',  '=', 'point_items.item_id')
+        .where('point_items.point_id', id)
+        .select('items.title');
+
+
+
+    return res.json({point, items});
 }
 
   async create(req: Request, res: Response) {
@@ -58,7 +82,8 @@ async show(req: Request, res: Response) {
      })
   
      await trx('point_items').insert(pointItems)
-  
+
+     await trx.commit()
   
      return res.json({
        id: point_id,
