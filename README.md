@@ -88,7 +88,7 @@ $ npm run dev
 # O servidor inciará na porta:3333 - acesse http://localhost:3333
 ```
 
-### 🎆 Rodando a aplicação web (Front-end)
+### 🎡 Rodando a aplicação web (Front-end)
 
 ```bash
 # Clone este repositório
@@ -101,10 +101,10 @@ $ cd ecoleta
 $ cd web
 
 # Instale as dependências
-$ npm install
+$ yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run start
+$ yarn start
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
