@@ -48,11 +48,12 @@ Layout disponível no [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/
 
 ## 🛠 Ferramentas
 
-- [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org/)
+- [NodeJS](https://nodejs.org/en/)
+- [ReactJS](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [KnexJS](http://knexjs.org/)
+- [Leaflet](https://react-leaflet.js.org/)
 - [Insomnia](https://insomnia.rest/)
 - [SQLite](https://www.sqlite.org/docs.html)
 - [SQLite Browser](https://sqlitebrowser.org/)
@@ -101,10 +102,10 @@ $ cd ecoleta
 $ cd web
 
 # Instale as dependências
-$ yarn install
+$ npm install
 
 # Execute a aplicação em modo de desenvolvimento
-$ yarn start
+$ npm start
 
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
@@ -123,4 +124,4 @@ $ yarn start
 
 ## ✨ Finalizando
 
-Este projeto esta sendo feito durante a **Next Level Week** em Junho de 2020, por **Ícaro Oliveira** 👋🏼 [Entre em contato!](https://www.linkedin.com/in/icaroov/)
+Este projeto foi feito durante a **Next Level Week** em Junho de 2020, por **Ícaro Oliveira** 👋🏼 [Entre em contato!](https://www.linkedin.com/in/icaroov/)
