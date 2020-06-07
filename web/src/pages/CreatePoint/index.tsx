@@ -1,13 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { FiArrowLeft } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 import { Map, TileLayer, Marker } from 'react-leaflet'
+import api from '../../services/api'
 
 import './styles.css'
 
 import logo from '../../assets/logo.svg'
 
+// INTERFACE
+interface Item {
+  id: number,
+  title: string,
+  image_url: string;
+}
+
 const CreatePoint = () => {
+
+  const [items, setItems] = useState<Item[]>([])
+
+  useEffect(() => {
+    api.get('items').then(response => {
+      setItems(response.data)
+    })
+  }, [])
+
   return (
     <div id="page-create-point">
       <header>
@@ -98,35 +115,12 @@ const CreatePoint = () => {
           </legend>
 
           <ul className="items-grid">
-            <li>
-              <img src="" alt=""/>
-              <span></span>
-            </li>
-          
-            <li>
-              <img src="" alt=""/>
-              <span></span>
-            </li>
-          
-            <li>
-              <img src="" alt=""/>
-              <span></span>
-            </li>
-          
-            <li>
-              <img src="" alt=""/>
-              <span></span>
-            </li>
-
-            <li>
-              <img src="" alt=""/>
-              <span></span>
-            </li>
-          
-            <li>
-              <img src="" alt=""/>
-              <span></span>
-            </li>
+            {items.map(item => (
+              <li key={item.id}>
+                <img src={item.image_url} alt={item.title}/>
+                <span>{item.title}</span>
+              </li>
+            ))}
           </ul>
 
         </fieldset>
