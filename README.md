@@ -59,6 +59,7 @@ Layout disponível no [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/
 - [SQLite](https://www.sqlite.org/docs.html)
 - [SQLite Browser](https://sqlitebrowser.org/)
 - [Expo](https://expo.io/)
+- [React Navigation](https://reactnavigation.org/)
 
 ## 🚀 Como rodar este projeto
 
