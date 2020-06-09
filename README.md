@@ -114,7 +114,22 @@ $ npm start
 
 ### 📱 Rodando a aplicação mobile 
 
-🚧 Em construção... 🚧
+```bash
+# Clone este repositório
+$ git clone https://github.com/icaroov/ecoleta.git
+
+# Acesse a pasta do projeto
+$ cd ecoleta
+
+# Vá para a pasta da aplicação Front End
+$ cd mobile
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
+```
 
 ## 🤔 Como contribuir para o projeto
 
